@@ -31,7 +31,7 @@ func (admin *Admin) sleep()(sleepInfo string){
 }
 
 
-func main(){
+func testInterface(){
 	user := User{"小明", 18, 1}
 	info := user.sleep()
 
@@ -41,4 +41,12 @@ func main(){
 	
 	fmt.Println(info)
 	fmt.Println(adminInfo)
+}
+func main(){
+
+	sum := 0
+	n := 100
+
+	sum = (1 +n) * n / 2
+	fmt.Println(sum)
 }
