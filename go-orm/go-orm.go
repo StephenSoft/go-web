@@ -3,6 +3,8 @@ package main
 import (
 	"gorm.io/gorm"
 	"gorm.io/driver/sqlite"
+
+	"fmt"
 )
 
 type Product struct{
@@ -21,5 +23,8 @@ func main(){
 	// db.AutoMigrate(&Product{})
 
 	// db.Create(&Product{Code: "0001",Price: 200, Name: "洗发水"})
-	db.Find
+	var products []Product
+	result := db.Find(&products)
+
+	fmt.Println(result)
 }
